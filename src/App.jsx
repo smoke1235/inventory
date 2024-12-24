@@ -2,7 +2,7 @@
 import './App.css'
 
 import { useQuery, gql } from '@apollo/client';
-
+import { Link } from "react-router";
 
 const GET_LOCATIONS = gql`
   query GetLocations {
@@ -40,11 +40,13 @@ function App() {
   return (
     <div>
       <div className='productList grid'>
+      <Link to="/detail/1">
         <div className='product'>
           <div className='name'>Naam</div>
           <div className='stock'>Op voorraad: 5</div>
           <div className='lastupdated'>Laast bijgewerkt: 12-12-2024 11:30</div>
         </div>
+        </Link>
         <div className='product'>
           <div className='name'>Naam 2</div>
           <div className='stock'>Op voorraad: 1</div>
